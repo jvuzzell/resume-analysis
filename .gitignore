@@ -1,3 +1,5 @@
 documents/*
 reports/*
-!.gitignore
+!.gitignore 
+myenv
+data
