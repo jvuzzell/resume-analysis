@@ -1,1 +1,3 @@
 documents/*
+reports/*
+!.gitignore
