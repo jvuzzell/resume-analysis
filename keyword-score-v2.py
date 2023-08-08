@@ -52,7 +52,7 @@ input_json = os.path.join(current_directory, "keywords/FS_PHP_Dev_001_keywords.j
 pdf_directory = os.path.join(current_directory, "documents/")  # Replace this with the directory containing your PDF files
 
 # Output CSV
-output_csv = os.path.join(current_directory, "reports/candidate_score_by_section.csv")
+output_csv = os.path.join(current_directory, "data/candidate_score_by_section.csv")
 
 # Load the JSON data only once
 with open(input_json) as json_file:

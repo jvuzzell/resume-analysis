@@ -5,7 +5,7 @@ from heapq import nlargest
 from PyPDF2 import PdfReader
 
 current_directory = os.getcwd()
-reports_directory = os.path.join(current_directory, "reports")
+data_directory = os.path.join(current_directory, "data")
 documents_directory = os.path.join(current_directory, "documents")
 
 def read_pdf(file_path): 
@@ -61,21 +61,21 @@ def tally_columns(csv_file):
     return column_totals, keywords_by_column
 
 if __name__ == "__main__":
-    csv_file = os.path.join(current_directory, "reports/candidate_score_by_section.csv")  # Replace with the actual file path
+    csv_file = os.path.join(current_directory, "data/candidate_score_by_section.csv")  # Replace with the actual file path
     column_totals, keywords_by_column = tally_columns(csv_file)
 
     sorted_column_totals = dict(sorted(column_totals.items(), key=lambda item: item[1], reverse=True))
 
     candidate_urls = parse_pdfs_to_csv(documents_directory)
 
-    output_file = os.path.join(reports_directory, "column_totals_and_keywords.csv")
+    output_file = os.path.join(data_directory, "column_totals_and_keywords.csv")
     with open(output_file, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(["File", "Total", "Top 5 Keywords", "URLs"])
         for header, total in sorted_column_totals.items():
             top_5_keywords = nlargest(5, keywords_by_column[header])
             top_5_keywords_str = ', '.join(keyword for _, keyword in top_5_keywords)
-            urls = ', '.join(url for file, urls in candidate_urls.items() for url in urls if file in header)
+            urls = '\n'.join(url for file, urls in candidate_urls.items() for url in urls if file in header)
             writer.writerow([header, total, top_5_keywords_str, urls])
 
     print("Column totals and top 5 keywords saved to 'column_totals_and_keywords.csv' in the reports directory.")
