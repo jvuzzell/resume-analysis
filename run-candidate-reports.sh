@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Replace these with the actual paths to your Python scripts
-python3 keyword-score-v2.py
-python3 keyword-total-score.py
-python3 create-excel-book.py
+# Replace these with the actual paths to your Python scripts 
+python3 PDF_Application_Parser.py
+python3 Keyword-Match-Resume.py
+python3 Summarize-Candidates.py
+python3 Create-Excel-Book.py

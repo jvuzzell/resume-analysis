@@ -1,0 +1,8 @@
+PyPDF2==1.26.0
+pandas==1.2.4
+openpyxl==3.0.7
+json==2.0.9
+os==0.1.1
+re==2.2.1
+csv==1.0
+heapq==1.0.0

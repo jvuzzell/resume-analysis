@@ -17,21 +17,34 @@ def apply_formatting(sheet):
         for cell in column_cells:
             try:
                 if len(str(cell.value)) > max_length:
-                    max_length = len(cell.value)
+                    max_length = len(str(cell.value))
+                if "\n" in str(cell.value):
+                    cell.alignment = openpyxl.styles.Alignment(wrap_text=True)  # Enable line breaks
             except:
                 pass
         adjusted_width = (max_length + 2) * 1.2
         sheet.column_dimensions[column_cells[0].column_letter].width = adjusted_width
 
+    # Adjust row height to fit the content
+    for row in sheet.iter_rows():
+        for cell in row:
+            cell.alignment = openpyxl.styles.Alignment(wrap_text=True)
+
 def csv_to_excel(csv_folder, output_excel):
     all_dataframes = {}
-    for file in os.listdir(csv_folder):
-        if file.endswith('.csv'):
-            csv_file = os.path.join(csv_folder, file)
-            df = pd.read_csv(csv_file)
-            # Use the file name (without extension) as the sheet name
-            sheet_name = os.path.splitext(file)[0]
-            all_dataframes[sheet_name] = df
+    
+    # Extract all valid CSV files first
+    csv_files = [file for file in os.listdir(csv_folder) if file.endswith('.csv')]
+
+    # Sort files based on the pg-* prefix
+    sorted_files = sorted(csv_files, key=lambda x: int(x.split('_')[0].replace('pg-', '')))
+    
+    for file in sorted_files:
+        csv_file = os.path.join(csv_folder, file)
+        df = pd.read_csv(csv_file)
+        # Use the file name (without extension) as the sheet name
+        sheet_name = os.path.splitext(file)[0]
+        all_dataframes[sheet_name] = df
 
     if all_dataframes:
         # Create a new Excel workbook
@@ -52,7 +65,7 @@ def csv_to_excel(csv_folder, output_excel):
                 # Enable auto-filter to make columns sortable
                 sheet.auto_filter.ref = sheet.dimensions
 
-        # Remove the first sheet (Sheet) from the workbook
+        # Remove the default sheet (Sheet) from the workbook
         if "Sheet" in workbook.sheetnames:
             workbook.remove(workbook["Sheet"])
 

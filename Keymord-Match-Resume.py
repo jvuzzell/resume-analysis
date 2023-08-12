@@ -6,12 +6,12 @@ import pandas as pd
 current_directory = os.getcwd()
 
 # Function to read the contents of all PDF files in a directory
-def read_all_pdf_contents(pdf_directory):
+def read_all_pdf_contents(resumes_directory):
     all_text = {}
-    pdf_files = os.listdir(pdf_directory)
+    pdf_files = os.listdir(resumes_directory)
     for pdf_file in pdf_files:
         if pdf_file.lower().endswith(".pdf"):
-            pdf_path = os.path.join(pdf_directory, pdf_file)
+            pdf_path = os.path.join(resumes_directory, pdf_file)
             with open(pdf_path, 'rb') as file:
                 pdf_reader = PyPDF2.PdfReader(file)
                 text = ""
@@ -49,17 +49,17 @@ def save_to_csv(data, output_csv, pdf_filenames):
 
 # Input JSON and PDF directory 
 input_json = os.path.join(current_directory, "keywords/FS_PHP_Dev_001_keywords.json")
-pdf_directory = os.path.join(current_directory, "documents/")  # Replace this with the directory containing your PDF files
+resumes_directory = os.path.join(current_directory, "documents/resumes/")  # Replace this with the directory containing your PDF files
 
 # Output CSV
-output_csv = os.path.join(current_directory, "data/candidate_score_by_section.csv")
+output_csv = os.path.join(current_directory, "data/pg-3_candidate_score_by_section.csv")
 
 # Load the JSON data only once
 with open(input_json) as json_file:
     json_data = json.load(json_file)
 
 # Read all PDF contents once
-all_text = read_all_pdf_contents(pdf_directory)
+all_text = read_all_pdf_contents(resumes_directory)
 
 # Get the list of PDF filenames
 pdf_filenames = list(all_text.keys())

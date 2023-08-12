@@ -1,0 +1,97 @@
+
+I am looking to create a job listing for full stack php developer. 
+
+My company is building a SaaS platform for IT Compliance. Our Software stack is a mixture of: 
+- A headless API framework built on Laravel. The APIs support internal functionality as well as third-party integrations with vendors.
+- We also leverage Laravel to manage asynchronous jobs and batched processes in the background. 
+- We use MySQL to store relational records about transactions and product definition. 
+- Our focus is largely on automating processes for internal consultant via data imports from excel to MySQL as well as report generation. 
+- We are working on a Version 2 user experience that modernizes our late 90s user experience using react, typescript, and sass. 
+- In version 2 we will focus on API documentation, design systems, and developing repeatable development processes. 
+
+Our original Job listing: 
+1.    Full-Stack Engineer (strong PHP dev skills are important as the app is written in PHP).
+2.    Other technologies in production currently include JavaScript, AWS, HTML/CSS, ORMS, SQL, jQuery, Bootstrap, MongoDB, Open-Source RDBMS, and Docker. 
+3.    Strong technical skills with ambition and desire to take on more responsibility in a small firm. 
+4.    100% remote position – anywhere from 20-hours/week to full-time, depending on resource & fit – they do not want to disqualify a solid candidate if they can only commit to 20 hours/week
+5.    Bachelor’s Degree or equivalent work experience (a degree is not a requirement for the right person).
+6.    Experience with Agile Best Practices (currently using Atlassian internally.)
+7.    5+ years of experience in software engineering highly preferred
+8.    2+ years of experience as a full stack engineer highly preferred
+9.    Authorized to work in the United States required 
+10.   PHP experience is one of the most important things for this role. Need someone who is full on PHP – developing – not just using it as a tool behind WordPress  
+11.   Need boots on the ground to help with the code; they’re on the 5-yard line, but need someone who can get in, roll their sleeves up and work
+12.   Need a self-starter; self-motivated individual who can work independently and in small teams  
+13.   They use JIRA for their ticketing system / Bitbucket for their depository 
+14.   They are on EST hours but open to candidates in any time zone
+15.   Ideally US Citizens; they don’t have a requirement for their data, but some of their clients do. Although they don’t access their data, if they can avoid this so they don’t have to worry about this down the road, that would be ideal. 
+16.   Must be able to participate in daily scrum meetings
+
+We are looking for Mid-level to Senior Candidates. Desirable soft skills include
+- Pitching and presentating ideas using power point
+- Ability to communicate ideas with flowcharts, sequence diagrams, and ERD
+- Understanding of TCO (total cost of ownership) and vendor comparison/analysis
+- Experience providing RCA (root cause analysis)
+- Comfortability with pair programming and sharing ideas
+- Understanding of risk management in software including 
+- Experience with planning software development 
+- Exposure to BDD (business driven development) and delivering value by GWT and user stories
+- Awareness of SAFe Agile Framework  
+- Won't shy away from writing jira tickets for bugs and proposed features 
+- Understands how to reach different audiences (executives, clients, and technical team members)
+- Pro AI usage to enhance workflow  
+- Participates in Scrum and Backlog Refinement
+- Does not go rogue to complete an idea but instead includes and trusts the team to make decisions towards needed investments 
+- Capable of developing roadmaps for solutions  
+- Has experience as a team lead 
+- Oriented towards succession planning
+
+Desirable Hard Skills (Infrastructure and DevOps) 
+- Proficiency with Infrastructure as Code
+- Can create and deploy Docker Containers for web applications
+- Understands pros and cons of serverless products and concepts regarding AWS (i.e. EC2 via ECS vs Fargate via ECS)
+- Draws server diagrams and mapping software to systems with LucidChart, AWS CloudFormation, or Brainboard
+- Ability to calculate AWS service costs and projecting future costs based on increased load and increased user based 
+- Has designed and maintained high availability systems with load balancers, elastic scalability, and database clusters
+- Provisions AWS networks including VPC, AZs, subnets, Internet Gateways, VPN access  
+- Ability to deploy and maintain Mail servers via products like SES and Mailhog
+- Experience with designing and implementing plans for disaster recovery and business continuity 
+- Familiar with such as Github Actions and Bitbucket Pipelines for deploying code to multiple environments
+- Can configure DNS records to manage domains and subdomains 
+- Ability to use tools like Cloudwatch to setup alerts along with suggest alerts 
+
+Desirable Hard Skills (User Experience)
+- Has built component-driven interfaces with Javascript
+- Understands pub-sub and observable design patterns 
+- Can build reusable components using interfaces for props and types 
+- Experience with decoupled UI and backends that communicate exclusively via API 
+- Understands how design tokens are used in design systems to maintain consistent visual development 
+- Willing to document components and resusable CSS classes 
+- Experienced with sanitizing user input 
+- Able to manage user preferences and in app settings via localStorage versus cookies  
+- Has implemented SSO using JWT  
+- Understanding of modern design patterns for positive user experiences  
+- Experience with creating searches, filters, pagination, and displaying tabular data
+- Experience with managing webpack to setup pre and post compile processes, SCSS, storybook, React, and Typescript (not Vite or Parcel)
+
+Desirable Hard Skills (Backend)
+- Has architected stateless applications 
+- Understands micro-services 
+- Experience with monolithic repositories 
+- Can develop RESTful API 
+- Understands ERD and can design database schema  
+- Experience with migrating databases between environments
+- Capable of building automations with Shell Scripting and NodeJS
+- Experience with writing reports and views using MySQL and Postgres 
+- Has created custom data types in Postgres for storing and managing JSON
+- Understanding of document storage and file system manipulation
+- Experienced with developing custom ETL process and using tools 
+- Exposure to AWS Lambda 
+- Knowledge of how to implement jobs, queuing, and asynchronous batched processes using Laravel and/or AWS SNS, SQS, Lambda, and NodeJS
+- Ability to setup useful logs and topics for troubleshooting  
+- Can create load test API and debug queries to make for healthy and efficient  
+- Understanding of pagination on API responses and database queries
+- Can manage frontend requests for large queries asynchronously 
+- Experience using ORMs to retrieve and persist data 
+
+
